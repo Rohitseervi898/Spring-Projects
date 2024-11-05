@@ -1,10 +1,10 @@
-package com.example.SpringJPA;
+package com.rohit.LibraryManagementSystem;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringJpaApplicationTests {
+class LibraryManagementSystemApplicationTests {
 
 	@Test
 	void contextLoads() {
