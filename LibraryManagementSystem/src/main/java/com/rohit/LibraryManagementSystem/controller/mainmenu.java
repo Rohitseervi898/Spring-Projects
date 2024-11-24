@@ -6,14 +6,26 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class mainmenu {
     @Autowired
     Bookservice service;
+//    @GetMapping("/")
+//    public String index(){
+//        return "index.html";
+//    }
+
+
     @GetMapping("/books")
+    @CrossOrigin
     public List<Books> getbooks(){
         return service.getbooks();
+    }
+    @GetMapping("/books/{ids}")
+    public Optional<Books> getbooks(@PathVariable int ids){
+        return service.getbookbyid(ids);
     }
     @PostMapping("/books")
     public void add_books(@RequestBody Books books ){
