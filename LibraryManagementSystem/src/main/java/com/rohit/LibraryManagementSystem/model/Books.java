@@ -13,7 +13,5 @@ public class Books {
     private int book_id;
     private String Book_Name;
     private String Author;
-    public Books(){
-
-    }
+    public Books(){}
 }

@@ -1,23 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library Managment System</title>
+    <title>Books_info</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body id="index">
-    <button id="book-data-btn" onclick="window.location.href='http://127.0.0.1:5500/booksinfo.html'">
-        Books data
-    </button>
-    <button id="search-btn">
-        Search Book
-    </button>
-    <button id="add-data-btn">
-        add book data
-    </button>
-    <button id="delete-data-btn">
-        delete data
-    </button>
+
+<body id="book_data">
+    
+    <!-- <button onclick="window.location.href='http://127.0.0.1:5500/src/main/resources/templates/index.html'">
+        Back
+    </button> -->
+    <br>
+    <button onclick="openPopup()">Add Book</button>
+    <div id="popupForm" class="popup">
+        <form class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Add Book</h2>
+            <label for="bookID">Book ID:</label>
+            <input type="text" id="bookID" name="bookID" required>
+            <br>
+            <label for="bookName">Book Name:</label>
+            <input type="text" id="bookName" name="bookName" required>
+            <br>
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author" required>
+            <br>
+            <button id="edit_btn" type="submit" onclick="add_data(event)">Add Book</button>
+        </form>
+    </div>
+    <h1>Books Data</h1>
+    <table id="book_table">
+        <thead>
+            <tr>
+                <th>Book_id</th>
+                <th>Book Name</th>
+                <th>Author</th>
+            </tr>
+        </thead>
+        <tbody id="table_body">
+
+        </tbody>
+
+    </table>
     <script async src="script.js"></script>
 </body>
+
 </html>
